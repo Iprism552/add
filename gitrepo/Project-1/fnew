@@ -1,0 +1,97 @@
+import java.util.Scanner;
+class Largest
+{
+public static void main(String args[])
+{
+int a,b,c;
+System.out.println("Enter three integers ");
+Scanner sct = new Scanner(System.in);
+a = sct.nextInt();
+b = sct.nextInt(); //User Input
+c = sct.nextInt();
+if ( a > b && a > c )  // Condition check for Largest number
+System.out.println("1st number is largest.");
+else if ( b > a && b > c )
+System.out.println("2nd number is largest.");
+else if ( c > a && c > b )
+System.out.println("3rd number is largest.");
+else
+System.out.println("Number are not distinct.");
+}
+}
+Output:
+
+Enter three integers 6 10 7
+
+2nd number is largest.
+
+Factorial Calculation and a basic loop structure: The factorial of a number entered by the user is calculated.
+
+import java.util.Scanner;
+class Factorial
+{
+public static void main(String args[])
+{
+int n,c, fact = 1;
+System.out.println("Enter a number");
+Scanner sct = new Scanner(System.in);
+n = sct.nextInt();
+if ( n < 0 )
+System.out.println("Number should be non-negative.");
+else
+{
+for ( c = 1 ; c <= n ; c++ )  // Calculating Factorial
+fact = fact*c;
+System.out.println("Factorial of "+n+" is = "+fact);
+}
+}
+}
+Output
+
+Enter a number 5
+
+Factorial of 5 is = 120
+
+Program to calculate Reverse of a number
+
+import java.util.Scanner;
+class ReverseNumber
+{
+public static void main(String args[])
+{
+int n, rev = 0;
+System.out.println("Enter the number to reverse ");
+Scanner sct = new Scanner(System.in);
+n = sct.nextInt(); //User Input
+while( n != 0 )// Reversing a Number Entered
+{
+rev = rev * 10;
+rev = rev + n%10;
+n = n/10;
+}
+System.out.println("Reverse of entered number is "+rev);
+}
+}
+Output
+
+Enter the number to reverse 5234
+
+Reverse of entered number is 4325
+
+Program to calculate Reverse of a String
+
+import java.util.*;
+class ReverseString
+{
+public static void main(String args[])
+{
+String original, reverse = "";
+Scanner sct = new Scanner(System.in);
+System.out.println("Enter  string to reverse");
+original = sct.nextLine(); //String input from user
+int length = original.length();
+for ( int i = length - 1 ; i>= 0 ; i-- ) // Reversing the String
+reverse = reverse + original.charAt(i);
+System.out.println("Reverse of entered string is: "+reverse);
+}
+}
